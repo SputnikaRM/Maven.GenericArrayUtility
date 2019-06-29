@@ -53,12 +53,13 @@ public class ArrayUtility <T> {
     public T getMostCommonFromMerge(T[] arrayToMerge) {
         List<T> list = new ArrayList<>();
         T [] inputArray=array;
-        T mostCommon = list.get(0);
+
         for(int x= 0; x<inputArray.length;x++)
             list.add(inputArray[x]);
         for(int x= 0; x<arrayToMerge.length;x++)
             list.add(arrayToMerge[x]);
         Integer number =0;
+        T mostCommon = list.get(0);
         for(int x=0; x<list.size()-1;x++){
            Integer y= getNumberOfOccurrences(list.get(x));
             if(y > number){
